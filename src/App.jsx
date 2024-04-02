@@ -1,17 +1,24 @@
-import Navbar from './components/Navbar/Navbar'
-import Banner from './components/Banner/Banner'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import Footer from './components/Footer/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Navbar from './components/Navbar'
+import ItemListContainer from './components/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer'
+import Footer from './components/Footer'
+import { NotFound } from './components/NotFound'
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Banner gretings={"¡Bienvenidos a Tech Shop!"} />
-      <ItemListContainer />
+      <Routes>
+        <Route path="/" element={<ItemListContainer />}></Route>
+        <Route path="/category/:id" element={<ItemListContainer />}></Route>
+        <Route path="/item/:id" element={<ItemDetailContainer />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

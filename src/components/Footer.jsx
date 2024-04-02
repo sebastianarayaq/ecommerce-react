@@ -9,16 +9,13 @@ const Footer = () => {
                         <a href="#" className="hover:underline me-4 md:me-6">Inicio</a>
                     </li>
                     <li>
-                        <a href="#" className="hover:underline me-4 md:me-6">Consolas</a>
+                        <a href="#" className="hover:underline me-4 md:me-6">Apple</a>
                     </li>
                     <li>
-                        <a href="#" className="hover:underline me-4 md:me-6">Notebooks</a>
+                        <a href="#" className="hover:underline me-4 md:me-6">Samgsung</a>
                     </li>
                     <li>
-                        <a href="#" className="hover:underline me-4 md:me-6">Smartphones</a>
-                    </li>
-                    <li>
-                        <a href="#" className="hover:underline me-4 md:me-6">Tablets</a>
+                        <a href="#" className="hover:underline me-4 md:me-6">Xiaomi</a>
                     </li>
                 </ul>
             </div>

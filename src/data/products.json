@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "SAMSUNG GALAXY S21",
+    "category": "samsung",
+    "description": "Samsung Galaxy S21 Ultra 5G 12GB 128GB",
+    "pictureUrl": "https://ripleycl.imgix.net/https%3A%2F%2Fmedia-prod-use-1.mirakl.net%2FSOURCE%2F515e07a760a448b7b1c5979d81bf916b?w=750&h=555&ch=Width&auto=format&cs=strip&bg=FFFFFF&q=60&trimcolor=FFFFFF&trim=color&fit=fillmax&ixlib=js-1.1.0&s=f1880462c82e6278e243a0f5f133365e",
+    "price": 150000
+  },
+  {
+    "id": 2,
+    "title": "Xiaomi Redmi Note 13 Pro",
+    "category": "xiaomi",
+    "description": "Xiaomi Redmi Note 13 Pro+ 5G 512GB Black",
+    "pictureUrl": "https://home.ripley.cl/store/Attachment/WOP/D191/2000399840506/2000399840506_2.jpg",
+    "price": 150000
+  },
+  {
+    "id": 3,
+    "title": "iPhone 15 Pro Max",
+    "category": "apple",
+    "description": "Apple iPhone 15 Pro Max 256GB Titanio natural",
+    "pictureUrl": "https://home.ripley.cl/store/Attachment/WOP/D191/2000398328227/2000398328227_2.jpg",
+    "price": 150000
+  },
+  {
+    "id": 4,
+    "title": "iPhone 14",
+    "category": "apple",
+    "description": "Apple iPhone 14 Plus 128GB Morado prepago",
+    "pictureUrl": "https://home.ripley.cl/store/Attachment/WOP/D191/2000392805021/2000392805021_2.jpg",
+    "price": 150000
+  },
+  {
+    "id": 5,
+    "title": "Xiaomi POCO X6 256GB",
+    "category": "xiaomi",
+    "description": "Xiaomi Poco X6 256GB 8GB RAM 5G negro",
+    "pictureUrl": "https://ripleycl.imgix.net/https%3A%2F%2Fmedia-prod-use-1.mirakl.net%2FSOURCE%2F6023df423385492d86d4a704e006ffcd?w=750&h=555&ch=Width&auto=format&cs=strip&bg=FFFFFF&q=60&trimcolor=FFFFFF&trim=color&fit=fillmax&ixlib=js-1.1.0&s=5edfddaed3374d696aa91ad728570080",
+    "price": 150000
+  },
+  {
+    "id": 6,
+    "title": "Samsung Galaxy S24",
+    "category": "samsung",
+    "description": "Samsung Galaxy S24+ 5G 256GB Onyx Black",
+    "pictureUrl": "https://home.ripley.cl/store/Attachment/WOP/D191/2000399366709/2000399366709_2.jpg",
+    "price": 150000
+  }
+]
