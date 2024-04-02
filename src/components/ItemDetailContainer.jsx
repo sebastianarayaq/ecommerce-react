@@ -25,8 +25,9 @@ const ItemDetailContainer = () => {
     return (
         <div className='min-h-max'>
             <div className="flex flex-col flex-wrap justify-center items-center gap-4 my-4">
-                <p className='text-xl font-bold tracking-tight text-gray-900 text-center mb-3 h1'>{product.title}</p>
+                <h1 className='text-xl font-bold tracking-tight text-gray-900 text-center mb-3 h1'>{product.title}</h1>
                 <img src={product.pictureUrl} alt={product.title} />
+                <p className='text-black font-semibold'>${product.price}</p>
             </div>
         </div>
 

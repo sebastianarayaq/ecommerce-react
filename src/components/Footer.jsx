@@ -1,3 +1,6 @@
+import { NavLink } from 'react-router-dom'
+import Nav from 'react-bootstrap/Nav'
+
 const Footer = () => {
     return (
         <footer className="bg-white border-t-2">
@@ -6,16 +9,16 @@ const Footer = () => {
                 </span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
                     <li>
-                        <a href="#" className="hover:underline me-4 md:me-6">Inicio</a>
+                        <Nav.Link to="/" className="hover:underline me-4 md:me-6" as={NavLink}>Inicio</Nav.Link>
                     </li>
                     <li>
-                        <a href="#" className="hover:underline me-4 md:me-6">Apple</a>
+                        <Nav.Link to="/category/apple" className="hover:underline me-4 md:me-6" as={NavLink}>Apple</Nav.Link>
                     </li>
                     <li>
-                        <a href="#" className="hover:underline me-4 md:me-6">Samgsung</a>
+                        <Nav.Link to="/category/samsung" className="hover:underline me-4 md:me-6" as={NavLink}>Samsung</Nav.Link>
                     </li>
                     <li>
-                        <a href="#" className="hover:underline me-4 md:me-6">Xiaomi</a>
+                        <Nav.Link to="/category/xiaomi" className="hover:underline me-4 md:me-6" as={NavLink}>Xiaomi</Nav.Link>
                     </li>
                 </ul>
             </div>
