@@ -2,10 +2,11 @@ import { ItemList } from './ItemList'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import data from '../data/products.json'
-import Banner from './Banner';
+import Banner from './Banner'
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const { id } = useParams();
 
@@ -18,11 +19,21 @@ const ItemListContainer = () => {
             if (id) {
                 const filteredData = data.filter(d => d.category == id);
                 setProducts(filteredData)
+                setLoading(false)
             } else {
                 setProducts(data)
+                setLoading(false)
             }
         });
     }, [id])
+
+    if (loading) {
+        return (
+            <>
+                <p className=' text-black font-semibold text-center'>Cargando productos</p>
+            </>
+        )
+    }
 
     return (
         <div className='min-h-max'>

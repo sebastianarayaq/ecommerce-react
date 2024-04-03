@@ -5,6 +5,7 @@ import data from '../data/products.json'
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const { id } = useParams();
 
@@ -16,11 +17,24 @@ const ItemDetailContainer = () => {
         get.then((data) => {
             const filteredData = data.find(d => d.id == Number(id));
             setProduct(filteredData)
-
+            setLoading(false)
         });
     }, [id]);
 
-    if (!product) return null;
+    if (loading) {
+        return (
+            <>
+                <p className=' text-black font-semibold text-center'>Cargando producto</p>
+            </>
+        )
+    }
+
+    if (!product) {
+        return (
+            <p className='text-black font-semibold text-center'>Producto no encontrado</p>
+        )
+    }
+
 
     return (
         <div className='min-h-max'>
