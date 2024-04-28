@@ -1,8 +1,27 @@
-# React + Vite
+# Aplicación E-commerce con React para Coderhouse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Resumen
 
-Currently, two official plugins are available:
+Proyecto realizado para curso de React impartido por Coderhouse donde se aplicaron conceptos tales como:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Promesas, Asincronías, Hooks, Props, Enrutamiento y Navegación, Eventos, Contexto y conexión a BD con Firebase.
+
+## Dependencias
+
+- React-router-dom ➡ Implementación de rutas.
+- Bootstrap/Tailwind ➡ Maquetación y estilos.
+- Firebase ➡ Base de datos para almacenar y consumir información sobre mis productos.
+- Toastify ➡ Generación de alertas dinamicas.
+
+## Instalar y correr
+
+1. Clonar el repositorio
+   git clone https://github.com/sebastianarayaq/ecommerce-react
+2. Navegar al directorio del proyecto
+   cd ecommerce-react
+3. Correr el proyecto
+   npm run dev
+
+## Deploy realizado en Vercel
+
+https://ecommerce-react-tan-zeta.vercel.app/
