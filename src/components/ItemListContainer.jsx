@@ -1,8 +1,9 @@
 import { ItemList } from './ItemList'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import data from '../data/products.json'
 import Banner from './Banner'
+import { Loading } from './Loading';
+import { collection, getFirestore, getDocs, query, where } from 'firebase/firestore';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
@@ -10,27 +11,45 @@ const ItemListContainer = () => {
 
     const { id } = useParams();
 
-    useEffect(() => {
-        const get = new Promise((resolve) => {
-            setTimeout(() => resolve(data), 2000);
-        });
+    // useEffect(() => {
+    //     const get = new Promise((resolve) => {
+    //         setTimeout(() => resolve(data), 2000);
+    //     });
 
-        get.then((data) => {
-            if (id) {
-                const filteredData = data.filter(d => d.category == id);
-                setProducts(filteredData)
-                setLoading(false)
-            } else {
-                setProducts(data)
-                setLoading(false)
-            }
+    //     get.then((data) => {
+    //         if (id) {
+    //             const filteredData = data.filter(d => d.category == id);
+    //             setProducts(filteredData)
+    //             setLoading(false)
+    //         } else {
+    //             setProducts(data)
+    //             setLoading(false)
+    //         }
+    //     });
+    // }, [id])
+
+    useEffect(() => {
+        const db = getFirestore();
+        setLoading(true);
+        let refCollection;
+
+        if (!id) refCollection = collection(db, "items")
+        else {
+            refCollection = query(collection(db, "items"), where("categoryId", "==", id))
+        }
+
+        getDocs(refCollection).then((snapshot) => {
+            setProducts(snapshot.docs.map((doc) => {
+                return { id: doc.id, ...doc.data() };
+            }));
+            setLoading(false);
         });
-    }, [id])
+    }, [id]);
 
     if (loading) {
         return (
             <>
-                <p className=' text-black font-semibold text-center'>Cargando productos</p>
+                <Loading loading={"Cargando productos"} />
             </>
         )
     }

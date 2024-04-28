@@ -7,7 +7,7 @@ export const Item = ({ product }) => {
 
     return (
         <Card style={{ width: '18rem' }} className='border p-2 rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer' onClick={() => navigate(`/item/${product.id}`)}>
-            <Card.Img variant="top" className='mb-3' src={product.pictureUrl} />
+            <Card.Img variant="top" className='mb-3' src={product.imageURL} />
             <Card.Body>
                 <Card.Title className="text-xl font-bold tracking-tight text-gray-900 text-center mb-3">{product.title}</Card.Title>
                 <Card.Text className="text-md font-normal text-center text-gray-900 mb-3">
