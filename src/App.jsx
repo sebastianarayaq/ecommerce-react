@@ -6,23 +6,27 @@ import Footer from './components/Footer'
 import { NotFound } from './components/NotFound'
 import { Cart } from './components/Cart'
 import { CartProvider } from './contexts/CartContext';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<ItemListContainer />}></Route>
-          <Route path="/category/:id" element={<ItemListContainer />}></Route>
-          <Route path="/item/:id" element={<ItemDetailContainer />}></Route>
-          <Route path="*" element={<NotFound />}></Route>
-          <Route path="/cart" element={<Cart />}></Route>
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </CartProvider>
+    <>
+      <CartProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />}></Route>
+            <Route path="/category/:id" element={<ItemListContainer />}></Route>
+            <Route path="/item/:id" element={<ItemDetailContainer />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
+    </>
+
   )
 }
 

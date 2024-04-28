@@ -13,7 +13,7 @@ export const Item = ({ product }) => {
                 <Card.Text className="text-md font-normal text-center text-gray-900 mb-3">
                     {product.description}
                 </Card.Text>
-                <Link to={`/item/${product.id}`}><Button variant="primary" className="text-white bg-blue-700 hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Ver más</Button></Link>
+                <Link to={`/item/${product.id}`}><Button variant="primary" className="text-white bg-[#1a1a1a] hover:bg-[#4b4b4b] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Ver más</Button></Link>
             </Card.Body>
         </Card>
     );

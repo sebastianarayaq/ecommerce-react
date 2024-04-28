@@ -11,23 +11,6 @@ const ItemListContainer = () => {
 
     const { id } = useParams();
 
-    // useEffect(() => {
-    //     const get = new Promise((resolve) => {
-    //         setTimeout(() => resolve(data), 2000);
-    //     });
-
-    //     get.then((data) => {
-    //         if (id) {
-    //             const filteredData = data.filter(d => d.category == id);
-    //             setProducts(filteredData)
-    //             setLoading(false)
-    //         } else {
-    //             setProducts(data)
-    //             setLoading(false)
-    //         }
-    //     });
-    // }, [id])
-
     useEffect(() => {
         const db = getFirestore();
         setLoading(true);
