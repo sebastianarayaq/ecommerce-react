@@ -7,6 +7,7 @@ export const ItemDetail = ({ product }) => {
     const { addProduct } = useContext(CartContext);
 
     const add = (quantity) => {
+        console.log(product, quantity)
         addProduct(product, quantity);
     }
     return (

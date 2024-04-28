@@ -15,7 +15,7 @@ export const CartProvider = ({ children }) => {
                 if (i.id === product.id) {
                     return {
                         ...i,
-                        quantity: quantity.id + quantity,
+                        quantity: i.quantity + quantity,
                     };
                 } else {
                     return i;
@@ -24,7 +24,7 @@ export const CartProvider = ({ children }) => {
             setProducts(updateProducts);
         } else {
             setProducts((prev) => {
-                return [...prev, { ...products, quantity }];
+                return [...prev, { ...product, quantity }];
             });
         }
     }
